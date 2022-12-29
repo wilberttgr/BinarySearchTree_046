@@ -29,7 +29,32 @@ namespace BinarySearchTree_046
         {
             ROOT = null; //initializing ROOT to null
         }
-    }
+        public void insert(string element) //Insert a node in the binary sesarch tree
+        {
+            Node tmp, parent = null, currentNode = null;
+            search(element, ref parent, ref currentNode);
+            if (currentNode != null) // check if the node to be inserted already inserted or not
+            {
+                Console.WriteLine("Duplicate words not allowed");
+                return;
+            }
+            else // if the specified node is not present 
+            {
+                tmp = new Node(element, null, null); //creates a Node
+                if (parent == null) //if the trees is empty
+                {
+                    ROOT = tmp;
+                }
+                else if (string.Compare(element, parent.info) < 0)
+                {
+                    parent.leftchild = tmp;
+                }
+                else
+                {
+                    parent.rightchild = tmp;
+                }
+            }
+        }
     internal class Program
     {
         static void Main(string[] args)
