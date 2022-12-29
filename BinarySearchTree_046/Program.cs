@@ -123,7 +123,7 @@ namespace BinarySearchTree_046
                 Console.WriteLine("4. Perform postorder traversal");
                 Console.WriteLine("5. Exit");
                 Console.Write("\nEnter your choice (1-5) : ");
-                char ch = Convert.ToChar(Console.ReadKey());
+                char ch = Convert.ToChar(Console.ReadLine());
                 Console.WriteLine();
                 switch (ch)
                 {
